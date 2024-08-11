@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <title>Sorry bollei sob somossar somadhan hoye jabe?</title>
+</head>
+<body>
+    <div class="full-image">
+        <audio id="background-audio" loop>
+            <source src="/sorry2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="pla" onclick="document.getElementById('background-audio').play()">Play</button>
+        <div class="overlay-text">
+            সরি বললেই সব সমস্যার সমাধান হয়ে যাবে ?
+        </div>
+    </div>
+    <script>
+        // Automatically play audio if user interacts with the page
+        document.body.addEventListener('click', () => {
+            const audio = document.getElementById('background-audio');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>
